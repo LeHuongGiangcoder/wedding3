@@ -5,6 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+import Ornament from "./Ornament";
+
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function RSVP() {
@@ -32,16 +34,21 @@ export default function RSVP() {
 
   return (
     <section 
+      id="rsvp"
       ref={container} 
-      className="relative w-full py-32 px-6 md:px-16 lg:px-32 bg-[var(--color-brand-cream)] text-black"
+      className="relative w-full py-32 px-6 md:px-16 lg:px-32 bg-[#F5F5DC] text-[#3E2723]"
     >
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="font-heading text-5xl md:text-7xl mb-6 rsvp-reveal">
+        <p className="font-sans text-[10px] tracking-[0.4em] uppercase text-[#3E2723]/40 mb-4 rsvp-reveal">
+          We would be honored
+        </p>
+        <h2 className="font-heading text-5xl md:text-7xl mb-4 rsvp-reveal">
           RSVP
         </h2>
-        <p className="font-sans text-sm md:text-base tracking-[0.1em] mb-16 rsvp-reveal uppercase opacity-80">
+        <p className="font-sans text-sm tracking-[0.15em] mb-6 rsvp-reveal uppercase text-[#3E2723]/60">
           Kindly respond by September 1st, 2026
         </p>
+        <Ornament variant="diamond" className="mb-14 rsvp-reveal" />
 
         {submitted ? (
           <div className="py-20 rsvp-reveal">
