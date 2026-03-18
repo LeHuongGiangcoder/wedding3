@@ -40,7 +40,7 @@ const rows = [
     type: "two-centered" as const,
     images: [
       { src: "/assets/13.jpg", alt: "Moment" },
-      { src: "/assets/14.jpg", alt: "Moment" },
+      { src: "/assets/4.jpg", alt: "Moment" },
     ],
   },
   // Row 4: Three columns again with different images
